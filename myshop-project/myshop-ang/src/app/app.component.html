@@ -1,0 +1,12 @@
+<div class="basket">
+    Stan koszyka
+    <ul>
+        <li *ngFor="let item of basket">
+            {{item.name}} x {{item.count}}
+        </li>
+    </ul>
+</div>
+<div class="products">
+    <button *ngFor="let prod of products" type="button" (click)="addToBasket(prod)">{{prod.name}}</button>
+</div>
+<button *ngIf="authInfo.loggedIn" type="button">Super przycisk</button>
